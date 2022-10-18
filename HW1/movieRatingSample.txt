@@ -1,0 +1,134 @@
+Toy Story (1995)|4.0|1
+Toy Story (1995)|4.0|5
+Toy Story (1995)|4.5|7
+Toy Story (1995)|2.5|15
+Toy Story (1995)|4.5|17
+Toy Story (1995)|3.5|18
+Jumanji (1995)|4.0|6
+Jumanji (1995)|4.0|8
+Jumanji (1995)|3.0|18
+Jumanji (1995)|3.0|19
+Jumanji (1995)|3.0|20
+Jumanji (1995)|3.5|21
+Tom and Huck (1995)|3.0|6
+Tom and Huck (1995)|1.0|20
+Tom and Huck (1995)|5.0|43
+Tom and Huck (1995)|3.0|274
+Tom and Huck (1995)|2.0|372
+Tom and Huck (1995)|3.0|414
+Grumpier Old Men (1995)|4.0|1
+Grumpier Old Men (1995)|5.0|6
+Grumpier Old Men (1995)|3.0|19
+Grumpier Old Men (1995)|3.0|32
+Grumpier Old Men (1995)|4.0|42
+Grumpier Old Men (1995)|5.0|43
+Waiting to Exhale (1995)|3.0|6
+Waiting to Exhale (1995)|3.0|14
+Waiting to Exhale (1995)|3.0|84
+Waiting to Exhale (1995)|3.0|162
+Waiting to Exhale (1995)|1.0|262
+Waiting to Exhale (1995)|2.0|411
+Father of the Bride Part II (1995)|5.0|6
+Father of the Bride Part II (1995)|3.0|31
+Father of the Bride Part II (1995)|5.0|43
+Father of the Bride Part II (1995)|3.0|45
+Father of the Bride Part II (1995)|4.0|58
+Father of the Bride Part II (1995)|4.0|66
+Heat (1995)|4.0|1
+Heat (1995)|4.0|6
+Heat (1995)|5.0|11
+Heat (1995)|4.0|18
+Heat (1995)|4.0|23
+Heat (1995)|4.5|24
+Sudden Death (1995)|4.0|151
+Sudden Death (1995)|3.0|179
+Sudden Death (1995)|3.0|217
+Sudden Death (1995)|2.0|269
+Sudden Death (1995)|3.0|270
+Sudden Death (1995)|5.0|337
+GoldenEye (1995)|3.0|6
+GoldenEye (1995)|2.0|8
+GoldenEye (1995)|3.0|11
+GoldenEye (1995)|2.0|19
+GoldenEye (1995)|5.0|21
+GoldenEye (1995)|3.0|26
+Travel (2002)|3.0|1
+Travel (2002)|2.1|2
+Travel (2002)|0.8|3
+Travel (2002)|4.5|4
+Travel (2002)|1.4|5
+Travel (2002)|2.4|6
+Travel (2002)|2.6|7
+Jungle (1868)|1.0|1
+Jungle (1868)|2.3|2
+Jungle (1868)|5.0|3
+Jungle (1868)|4.2|4
+Jungle (1868)|3.6|5
+Jungle (1868)|1.9|6
+Jungle (1868)|2.6|7
+Fight (2022)|1.0|1
+Fight (2022)|2.0|2
+Fight (2022)|2.5|3
+Fight (2022)|3.2|4
+Fight (2022)|2.5|5
+Fight (2022)|2.7|6
+Scare (2022)|1.0|1
+Scare (2022)|5.0|2
+Scare (2022)|5.0|3
+Scare (2022)|4.8|4
+Scare (2022)|4.9|5
+Scare (2022)|4.8|6
+Cry (1998)|1.0|1
+Cry (1998)|2.5|2
+Cry (1998)|2.5|3
+Cry (1998)|2.5|4
+Cry (1998)|3.2|5
+Cry (1998)|3.0|6
+Haunt (2001)|1.0|1
+Haunt (2001)|1.0|2
+Haunt (2001)|5.0|3
+Haunt (2001)|3.3|4
+Haunt (2001)|3.6|5
+Haunt (2001)|2.4|6
+Scared N Cry (200)|1.0|1
+Scared N Cry (200)|5.0|2
+Scared N Cry (200)|2.3|3
+Scared N Cry (200)|3.4|4
+Scared N Cry (200)|1.9|5
+Scared N Cry (200)|1.2|6
+Star Wars (1999)|1.0|1
+Star Wars (1999)|1.2|2
+Star Wars (1999)|1.8|3
+Star Wars (1999)|3.4|4
+Star Wars (1999)|4.6|5
+Jedi (2002)|1.0|1
+Jedi (2002)|2.4|2
+Jedi (2002)|3.7|3
+Jedi (2002)|2.9|4
+Jedi (2002)|4.0|5
+Jedi (2002)|5.0|6
+Watch (1999)|1.0|1
+Watch (1999)|2.3|2
+Watch (1999)|1.9|3
+Watch (1999)|1.5|4
+Watch (1999)|1.9|5
+Bond (2004)|4.0|1
+Bond (2004)|4.0|2
+Bond (2004)|4.0|3
+Bond (2004)|5.0|4
+Bond (2004)|2.5|5
+Bond (2004)|4.6|6
+Hospital (1892)|5.0|1
+Hospital (1892)|5.0|2
+Hospital (1892)|4.6|3
+Life (2000)|1.0|1
+Life (2000)|1.3|2
+Life (2000)|4.5|3
+Life (2000)|3.8|4
+Genjin (2009)|1.0|1
+Genjin (2009)|3.6|2
+Genjin (2009)|3.5|3
+Genjin (2009)|4.8|4
+Genjin (2009)|5.0|5
+Genjin (2009)|1.4|6
+Bakugon (2002)|4.0|1
