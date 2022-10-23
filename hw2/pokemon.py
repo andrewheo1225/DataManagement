@@ -81,48 +81,58 @@ def avgAtkDefHp(fileName):
     avgAtkAbove40 = 0
     avgDefAbove40 = 0
     avgHpAbove40 = 0
-    countOfPokemonOver40 = 0
+    countOfPokemonOver40Atk = 0
+    countOfPokemonOver40Def = 0
+    countOfPokemonOver40Hp = 0
     with open(fileName, 'r') as f:
         next(f)
         for line in f:
             l = line.rstrip('\n').split(',')
             # above lv 40
             if (float(l[2]) > 40):
-                countOfPokemonOver40 += 1
                 # attack/def/hp is not NaN
                 if (l[6] != "NaN"):
                     avgAtkAbove40 += float(l[6])
+                    countOfPokemonOver40Atk+=1
                 if (l[7] != "NaN"):
                     avgDefAbove40 += float(l[7])
+                    countOfPokemonOver40Def+=1
                 if (l[8] != "NaN"):
                     avgHpAbove40 += float(l[8])
+                    countOfPokemonOver40Hp+=1
 
-    avgAtkAbove40 = round(avgAtkAbove40 / countOfPokemonOver40, 1)
-    avgDefAbove40 = round(avgDefAbove40 / countOfPokemonOver40, 1)
-    avgHpAbove40 = round(avgHpAbove40 / countOfPokemonOver40, 1)
+    avgAtkAbove40 = round(avgAtkAbove40 / countOfPokemonOver40Atk, 1)
+    avgDefAbove40 = round(avgDefAbove40 / countOfPokemonOver40Def, 1)
+    avgHpAbove40 = round(avgHpAbove40 / countOfPokemonOver40Hp, 1)
 
+    #same thing but for under lv <= 40
     avgAtkUnder40 = 0
     avgDefUnder40 = 0
     avgHpUnder40 = 0
-    countOfPokemonUnder40 = 0
+    countOfPokemonUnder40Atk = 0
+    countOfPokemonUnder40Def = 0
+    countOfPokemonUnder40Hp = 0
     with open(fileName, 'r') as f:
         next(f)
         for line in f:
             l = line.rstrip('\n').split(',')
             # Under lv 40
             if (float(l[2]) <= 40):
-                countOfPokemonUnder40 += 1
+                
                 # attack/def/hp is not NaN
                 if (l[6] != "NaN"):
                     avgAtkUnder40 += float(l[6])
+                    countOfPokemonUnder40Atk +=1
                 if (l[7] != "NaN"):
                     avgDefUnder40 += float(l[7])
+                    countOfPokemonUnder40Def +=1
                 if (l[8] != "NaN"):
                     avgHpUnder40 += float(l[8])
+                    countOfPokemonUnder40Hp +=1
 
-    avgAtkUnder40 = round(avgAtkUnder40 / countOfPokemonUnder40, 1)
-    avgDefUnder40 = round(avgDefUnder40 / countOfPokemonUnder40, 1)
-    avgHpUnder40 = round(avgHpUnder40 / countOfPokemonUnder40, 1)
+    avgAtkUnder40 = round(avgAtkUnder40 / countOfPokemonUnder40Atk, 1)
+    avgDefUnder40 = round(avgDefUnder40 / countOfPokemonUnder40Def, 1)
+    avgHpUnder40 = round(avgHpUnder40 / countOfPokemonUnder40Hp, 1)
     
     r = csv.reader(open(fileName))
     lines = list(r)
