@@ -5,12 +5,6 @@ import re
 import collections
 import csv
 
-
-
-# id,    name,    level,  personality,  type,     weakness,  atk,     def,    hp,    stage
-# 53.0,  Persian, 40.0,   mild,         normal,   fighting,  104.0,   116.0,  NaN,   2.0
-# 126.0, Magmar,  44.0,   docile,       NaN,      water,     96.0,    83.0,   153.0, 1.0
-
 def percentOfFireAbove40(fileName):
     numOfFire = 0
     numOfFireAndAbove40 = 0
@@ -160,7 +154,8 @@ def avgAtkDefHp(fileName):
 
 
 def main():
-    fileName = "pokemonTrainTrash.csv"
+    #MUST CHANGE FILENAME PRIOR TO SUBMISSION. I JUST CREATED A TRASH CSV TO WORK WITH SMALLER VALUES
+    fileName = "pokemonTrain.csv"
     # part 1
     # percentOfFireAbove40(fileName)
 
@@ -168,6 +163,7 @@ def main():
     missingTypeBasedOnHighestWeaknessType(fileName)
 
     # part3
+    #assuming that there are at least 1 value for missing atk/defhp to prevent division by zero
     avgAtkDefHp("pokemonResult.csv")
     pass
 
