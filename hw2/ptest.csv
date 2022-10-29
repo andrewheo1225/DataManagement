@@ -1,0 +1,8 @@
+id,name,level,personality,type,weakness,atk,def,hp,stage
+53.0,Persian,40.0,mild,normal,fighting,104.0,116.0,NaN,2.0
+126.0,Magmar,44.0,docile,NaN,water,96.0,83.0,153.0,1.0
+57.0,Primeape,9.0,lonely,fighting,flying,NaN,66.0,43.0,2.0
+3.0,Venusaur,44.0,sassy,grass,fire,136.0,195.0,92.0,3.0
+11.0,Metapod,4.0,naive,grass,fire,NaN,114.0,NaN,2.0
+126.0,Magmar,96.0,modest,fire,water,62.0,114.0,NaN,1.0
+137.0,Porygon,96.0,relaxed,NaN,fighting,68.0,50.0,127.0,1.0
