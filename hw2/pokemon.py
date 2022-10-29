@@ -261,14 +261,14 @@ def main():
     #MUST CHANGE FILENAME PRIOR TO SUBMISSION. I JUST CREATED A TRASH CSV TO WORK WITH SMALLER VALUES
     fileName = "pokemonTrain.csv"
     # part 1
-    # percentOfFireAbove40(fileName)
+    percentOfFireAbove40(fileName)
 
     # part2
-    # missingTypeBasedOnHighestWeaknessType(fileName)
+    missingTypeBasedOnHighestWeaknessType(fileName)
 
     # part3
     # assuming that there are at least 1 value for missing atk/defhp to prevent division by zero
-    # avgAtkDefHp("pokemonResult.csv")
+    avgAtkDefHp(fileName)
     
     # part 4
     dictMapTypesToPersonalities(fileName)
