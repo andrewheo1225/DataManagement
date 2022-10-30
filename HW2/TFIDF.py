@@ -1,4 +1,4 @@
-#DUPLICATE TEST VERSION
+#FINAL 10/29
 import math
 import re
 
@@ -20,6 +20,7 @@ def preprocess(docname):
     #clean:
     text = re.sub(r'[^\w\s]', '', text) #remove nonword characters
     text = re.sub(r'(https\w*\S)', '', text) #remove links
+    text = re.sub(r'\n', ' ', text)
     text = re.sub(r' +', ' ', text) #remove extra whitespace
     text = text.lower() #convert all to lowercase   
 
@@ -32,7 +33,7 @@ def preprocess(docname):
     matches = re.findall(r'\b(\w*)(?:(?:ing)|(?:ly)|(?:ment))\b', text ) #find all roots (-ing, -ly, -ment)
     for stem in matches: #for each root
         text = re.sub(rf'\b{stem}(?:(?:ing)|(?:ly)|(?:ment))\b', stem, text) #change whatever that stem is connected to to just that stem
-       
+
     #write data to preproc_[docname].txt
     with open(f'preproc_{docname}', 'w') as f:
         f.write(text)
@@ -52,9 +53,10 @@ def gettf(docname):
         else:
             freqs[word] = 1
 
-    #print("tf freqs: " + str(freqs) + "\n") FREQUENCY/COUNT SEEMS TO BE CORRECT
     for (word, count) in freqs.items():
         freqs[word] = count/tot
+    
+    #print("tf: " + str(freqs) + "\n") #FREQUENCY/COUNT SEEMS TO BE CORRECT
     return freqs
 
 def getidf(tf, doclist):
@@ -82,8 +84,11 @@ def gettfidf(doc, tf, idf):
     for word in tf:
         tfidf[word] = round(tf.get(word) * idf.get(word), 2) #calculate tfidf for each word.
 
+    #print("tfidf: " + str(tfidf))
     t5 = []
-    for i in range(5):
+    n = 5
+    if (len(tfidf) < 5): n = len(tfidf) #if there isnt enough for top 5
+    for i in range(n):
         max = ("", 0)
         for k, v in tfidf.items(): #iterate thru dict
             if v > max[1]: #if this is max
@@ -92,6 +97,7 @@ def gettfidf(doc, tf, idf):
                 if k < max[0]:
                     max = (k, v)
         t5.append(max) #save actual max
+        #print(max)
         del tfidf[max[0]] #delete it from list 
     
     with open(f'tfdif_{doc}', 'w') as f:
@@ -104,28 +110,11 @@ def gettfidf(doc, tf, idf):
 def main():
     doclist = []
     stopword() #read stopwords from doc and make into list
-    with open("idf-idf.txt", "r") as f:
+    with open("tfidf_docs.txt", "r") as f:
         input = f.read()
         doclist = input.split('\n')
-            
-        #compute tfidf
-        #print top tfidf
-    tf = {} #empty list of tf dictionaries for each doc. SAME ORDER AS DOCLIST
-    for docname in doclist: #for each document...
-        tf[docname] = gettf(f'preproc_{docname}') #create a dictionary of word:tf and add dictionaries to list.
-    idf = getidf(tf, doclist) #create word:idf dictionary per word for all docs
-    #actually:
-    for doc in doclist:
-        gettfidf(doc, tf[doc], idf) #create word:tfidf and print top 5
-
-
-def test():
-    doclist = []
-    stopword() #read stopwords from doc and make into list
-    with open("testing.txt", "r") as f:
-        input = f.read()
-        doclist = input.split('\n')
-            
+        for docname in doclist:
+            preprocess(docname)
         #compute tfidf
         #print top tfidf
     tf = {} #empty list of tf dictionaries for each doc. SAME ORDER AS DOCLIST
