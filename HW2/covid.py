@@ -1,3 +1,7 @@
+#Awad Shawl ams934 
+#cc1871 cynthia chen
+#Andrew Heo ayh35
+#Peter Zihe Zhang zz475
 import csv
 import math
 import re
