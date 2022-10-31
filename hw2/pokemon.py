@@ -152,19 +152,130 @@ def avgAtkDefHp(fileName):
     writer.writerows(lines)
     pass
 
+# Create a dictionary that maps pokemon types to their personalities.
+# This dictionary would map a string to a list of strings.
+# no NaN type recorded
+def dictMapTypesToPersonalities(fileName):
+    typeToPer = {}
+    i = 0 
+    with open(fileName, 'r') as f:
+        # skip first line
+        next(f)
+        for line in f:    
+            l = line.rstrip('\n').split(',')
+            # personality is at l[3]
+            per = l[3]
+            # type is at l[4]
+            type = l[4]
+            # make sure no repeat of types
+            if typeToPer.get(type)== None:
+                typeToPer[type]=[per]
+            else:
+                existPer = typeToPer.get(type)
+                # make sure no repeat of personality
+                if(per not in existPer):
+                    typeToPer[type].append(per)
+                    
+    # open up new doc, get ready to write
+    # get dict size
+    f = open("pokemon4.txt", "w")    
+    f.write("Pokemon type to personality mapping:\n\n")
+    dictSize = len(typeToPer)
+    # print(dictSize)
+    lineCount = 0
+    
+    # loop a sorted dict (sorted the key)
+    for key, val in sorted(typeToPer.items()):
+        # assume we do not record NaN type
+        if (key == "NaN"):
+            continue
+        lineCount = lineCount + 1
+        # create string 
+        tempStr = "{}:".format(key)
+        # sort the personalties list
+        #size of val
+        listSize = len(val)
+        perCount = 0
+        # print(key+" has "+ str(listSize)+" element")
+        for p in sorted(val):
+            # check if it's the last element, we do not need a extra comaa at the end
+            perCount = perCount + 1
+            if(perCount != listSize):
+                tempStr += " {},".format(p)
+            else:
+                tempStr += " {}".format(p)
+        
+        # print(tempStr)
+        # write into a new doc
+        if lineCount != dictSize:
+            f.write("   "+tempStr+"\n")
+        else:
+            f.write("   "+tempStr)
+    # close the doc
+    f.close()
+    pass
+
+# Find out the average Hit Points (“hp”) for pokemon of stage 3.0.
+# Your program should print the value as follows (replace . . . with value):         
+def aveHitStageThree(fileName):
+    ave = 0.0
+    sum = 0.0
+    pokemonStageThreeCount = 0
+    with open(fileName, 'r') as f:
+        next(f)
+        for line in f:  
+            l = line.rstrip('\n').split(',')
+            # the HP is at l[8]
+            hp = l[8]
+            # print(hp)
+            # the stage is at l[9]
+            stage = l[9]
+            # print(hp,stage)
+            
+            # if the pokemon is at stage 3
+            if(stage == "3.0"):
+                # print(hp,stage)
+                #if the number exists instead of NaN
+                # print(type(hp))
+                if(hp != "NaN"):
+                    # print(hp,stage)
+                    pokemonStageThreeCount = pokemonStageThreeCount + 1
+                    sum = sum + float(hp)
+
+    f = open("pokemon5.txt", "w") 
+    # print(pokemonStageThreeCount)
+    if (pokemonStageThreeCount == 0 ):
+        f.write("Average hit point for pokemon of stage 3.0 = 0")
+        return 
+    
+    ave = round(float( sum / pokemonStageThreeCount ))
+    
+    # print(sum,pokemonStageThreeCount,ave)    
+     
+    tempStr = "Average hit point for pokemon of stage 3.0 = {}".format(ave)
+    f.write(tempStr)
+    f.close()
+            
 
 def main():
     #MUST CHANGE FILENAME PRIOR TO SUBMISSION. I JUST CREATED A TRASH CSV TO WORK WITH SMALLER VALUES
     fileName = "pokemonTrain.csv"
     # part 1
-    # percentOfFireAbove40(fileName)
+    percentOfFireAbove40(fileName)
 
     # part2
     missingTypeBasedOnHighestWeaknessType(fileName)
 
     # part3
-    #assuming that there are at least 1 value for missing atk/defhp to prevent division by zero
-    avgAtkDefHp("pokemonResult.csv")
+    # assuming that there are at least 1 value for missing atk/defhp to prevent division by zero
+    avgAtkDefHp(fileName)
+    
+    # part 4
+    dictMapTypesToPersonalities(fileName)
+    
+    # part 5
+    aveHitStageThree(fileName)
+    
     pass
 
 
